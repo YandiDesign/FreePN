@@ -20,7 +20,7 @@
       nav_screens: 'Screens',
       cta_download: 'Download FreePN',
       cta_ghost: 'View on GitHub',
-      hero_h1: 'Connected means verified.',
+      hero_h1: 'A free VPN client for macOS.',
       hero_sub: 'Free public VPN feeds, tested for real reachability before they earn your connection. No accounts. No telemetry.',
       alt_connect: 'FreePN connected to a server: the power ring is on, live connections are listed, and the traffic graph is running.',
       verify_h2: 'Before it says Connected, it proves it.',
@@ -71,10 +71,10 @@
       inside_close: '574 unit tests ride along in the repository. The interface and this page both read English and Bahasa Indonesia.',
       warn_h2: 'Read this before trusting any free node.',
       warn_b: 'FreePN does not run its own servers. It collects feeds that anyone can operate, and a node operator can see unencrypted traffic passing through. Never sign in to banking, your primary email, or anything you cannot afford to lose while connected. This is a tool for reaching the open web, not for hiding who you are.',
-      warn_close: 'No free VPN client can change that. FreePN just refuses to pretend otherwise.',
+      warn_close: 'Treat free nodes as public places: fine for browsing, wrong for secrets.',
       dl_h2: 'Put an honest tunnel on your Mac.',
       dl_b: 'FreePN 1.0 for macOS 13 Ventura and later, on Apple Silicon and Intel.',
-      dl_note: 'The download is signed but not notarized. Right-click and Open on first launch. Source builds are one script away.',
+      lb_close: 'Close',
       footer_tag: 'FreePN by YandiDesign. MIT licensed.',
       f_gh: 'GitHub',
       f_lic: 'License',
@@ -87,7 +87,7 @@
       nav_screens: 'Tampilan',
       cta_download: 'Unduh FreePN',
       cta_ghost: 'Lihat di GitHub',
-      hero_h1: 'Terhubung berarti terbukti.',
+      hero_h1: 'Client VPN gratis untuk macOS.',
       hero_sub: 'Feed VPN publik gratis, diuji keterjangkauan nyatanya sebelum dipakai. Tanpa akun. Tanpa telemetri.',
       alt_connect: 'FreePN terhubung ke server: cincin daya menyala, koneksi aktif terdaftar, dan grafik trafik berjalan.',
       verify_h2: 'Sebelum bilang Terhubung, FreePN membuktikannya.',
@@ -138,10 +138,10 @@
       inside_close: '574 unit test ikut dalam repo. Antarmuka dan halaman ini sama-sama membaca Bahasa Indonesia dan English.',
       warn_h2: 'Baca ini sebelum memercayai node gratis mana pun.',
       warn_b: 'FreePN tidak menjalankan server sendiri. Aplikasi mengumpulkan feed yang bisa dioperasikan siapa saja, dan operator node bisa melihat trafik tak terenkripsi yang lewat. Jangan pernah login ke bank, email utama, atau apa pun yang tak ingin Anda kehilangan saat terhubung. Ini alat untuk menjangkau internet terbuka, bukan untuk menyembunyikan identitas.',
-      warn_close: 'Tidak ada client VPN gratis yang bisa mengubah itu. FreePN hanya menolak berpura-pura sebaliknya.',
+      warn_close: 'Perlakukan node gratis seperti ruang publik: cocok untuk menjelajah, bukan untuk rahasia.',
       dl_h2: 'Pasang tunnel yang jujur di Mac Anda.',
       dl_b: 'FreePN 1.0 untuk macOS 13 Ventura ke atas, di Apple Silicon dan Intel.',
-      dl_note: 'Unduhannya ditandatangani tapi belum di-notarize. Klik kanan lalu Open saat pertama dibuka. Build dari source tinggal satu skrip.',
+      lb_close: 'Tutup',
       footer_tag: 'FreePN oleh YandiDesign. Lisensi MIT.',
       f_gh: 'GitHub',
       f_lic: 'Lisensi',
@@ -197,6 +197,51 @@
         localStorage.setItem('freepn-lang', lang);
       } catch (e) {}
       apply(lang);
+    });
+  }
+
+  var lightbox = document.getElementById('lightbox');
+  var lightboxImg = document.getElementById('lightboxImg');
+  var lightboxClose = document.getElementById('lightboxClose');
+  var lastFocus = null;
+
+  function openLightbox(source) {
+    lightboxImg.src = source.currentSrc || source.src;
+    lightboxImg.alt = source.alt;
+    lastFocus = document.activeElement;
+    lightbox.hidden = false;
+    void lightbox.offsetWidth;
+    lightbox.classList.add('open');
+    root.classList.add('lb-open');
+    lightboxClose.focus();
+  }
+
+  function closeLightbox() {
+    lightbox.classList.remove('open');
+    root.classList.remove('lb-open');
+    window.setTimeout(function () {
+      lightbox.hidden = true;
+      lightboxImg.removeAttribute('src');
+      if (lastFocus) lastFocus.focus();
+    }, 260);
+  }
+
+  if (lightbox) {
+    document.querySelectorAll('.shot-zoom').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var img = btn.querySelector('img');
+        if (img) openLightbox(img);
+      });
+    });
+
+    lightboxClose.addEventListener('click', closeLightbox);
+
+    lightbox.addEventListener('click', function (e) {
+      if (e.target === lightbox) closeLightbox();
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && !lightbox.hidden) closeLightbox();
     });
   }
 

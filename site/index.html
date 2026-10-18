@@ -50,7 +50,7 @@
     <div class="dotfield" aria-hidden="true"></div>
     <div class="wrap hero__grid">
       <div class="hero__copy">
-        <h1 class="rise" data-i18n="hero_h1">Connected means verified.</h1>
+        <h1 class="rise" data-i18n="hero_h1">A free VPN client for macOS.</h1>
         <p class="hero__sub rise" data-i18n="hero_sub">Free public VPN feeds, tested for real reachability before they earn your connection. No accounts. No telemetry.</p>
         <div class="hero__cta rise">
           <a class="btn btn--primary" href="https://github.com/YandiDesign/FreePN/releases/download/v1.0/FreePN-1.0-1.dmg" data-i18n="cta_download">Download FreePN</a>
@@ -94,28 +94,36 @@
     <div class="rail" role="region" aria-label="App screens">
       <div class="card-shot reveal">
         <figure class="shot">
-          <img src="assets/img/screen-servers.webp" width="1400" height="771" alt="FreePN's server list: search and filters on top, protocol and latency columns, starred favorites." data-i18n-alt="alt_servers" loading="lazy">
+          <button class="shot-zoom" type="button">
+            <img src="assets/img/screen-servers.webp" width="1400" height="771" alt="FreePN's server list: search and filters on top, protocol and latency columns, starred favorites." data-i18n-alt="alt_servers" loading="lazy">
+          </button>
         </figure>
         <h3 data-i18n="cap_servers_t">Servers</h3>
         <p data-i18n="cap_servers_b">Search thousands of nodes, filter by protocol or source, sort by latency, star favorites. Nodes that fail a real test are marked, and can be hidden.</p>
       </div>
       <div class="card-shot reveal">
         <figure class="shot">
-          <img src="assets/img/screen-sources.webp" width="1400" height="771" alt="FreePN's sources screen: curated feed chips and a subscription URL field, with per-source status." data-i18n-alt="alt_sources" loading="lazy">
+          <button class="shot-zoom" type="button">
+            <img src="assets/img/screen-sources.webp" width="1400" height="771" alt="FreePN's sources screen: curated feed chips and a subscription URL field, with per-source status." data-i18n-alt="alt_sources" loading="lazy">
+          </button>
         </figure>
         <h3 data-i18n="cap_sources_t">Sources</h3>
         <p data-i18n="cap_sources_b">Paste any subscription URL. Clash YAML, base64 blobs, and raw share links are detected per source, with counts and HTTP errors shown plainly.</p>
       </div>
       <div class="card-shot reveal">
         <figure class="shot">
-          <img src="assets/img/screen-mac.webp" width="1400" height="771" alt="FreePN's MAC address screen: current MAC, randomize and restore controls, and a history of changes." data-i18n-alt="alt_mac" loading="lazy">
+          <button class="shot-zoom" type="button">
+            <img src="assets/img/screen-mac.webp" width="1400" height="771" alt="FreePN's MAC address screen: current MAC, randomize and restore controls, and a history of changes." data-i18n-alt="alt_mac" loading="lazy">
+          </button>
         </figure>
         <h3 data-i18n="cap_mac_t">MAC Address</h3>
         <p data-i18n="cap_mac_b">Randomize or set a custom MAC, restore the original, and keep a searchable history of every change.</p>
       </div>
       <div class="card-shot reveal">
         <figure class="shot">
-          <img src="assets/img/screen-settings.webp" width="1400" height="771" alt="FreePN's settings screen: update schedule, ping mode, CPU limit, UI scale, and language." data-i18n-alt="alt_settings" loading="lazy">
+          <button class="shot-zoom" type="button">
+            <img src="assets/img/screen-settings.webp" width="1400" height="771" alt="FreePN's settings screen: update schedule, ping mode, CPU limit, UI scale, and language." data-i18n-alt="alt_settings" loading="lazy">
+          </button>
         </figure>
         <h3 data-i18n="cap_settings_t">Settings</h3>
         <p data-i18n="cap_settings_b">Refresh schedules, ping mode, CPU limits, UI scale, and the app language. The public IP check stays off until you enable it.</p>
@@ -152,7 +160,9 @@
     <div class="wrap split">
       <div class="split__media reveal">
         <figure class="shot">
-          <img src="assets/img/screen-split.webp" width="1500" height="826" alt="FreePN's split tunneling screen: inclusive mode selected, a domain rule, the change log, and the app scanner." data-i18n-alt="alt_split" loading="lazy">
+          <button class="shot-zoom" type="button">
+            <img src="assets/img/screen-split.webp" width="1500" height="826" alt="FreePN's split tunneling screen: inclusive mode selected, a domain rule, the change log, and the app scanner." data-i18n-alt="alt_split" loading="lazy">
+          </button>
         </figure>
         <p class="shot__cap" data-i18n="split_caption">The change log records what was written to the config, before it can affect a connection.</p>
       </div>
@@ -202,7 +212,7 @@
     <div class="wrap">
       <h2 class="reveal" data-i18n="warn_h2">Read this before trusting any free node.</h2>
       <p class="reveal" data-i18n="warn_b">FreePN does not run its own servers. It collects feeds that anyone can operate, and a node operator can see unencrypted traffic passing through. Never sign in to banking, your primary email, or anything you cannot afford to lose while connected. This is a tool for reaching the open web, not for hiding who you are.</p>
-      <p class="warn__close reveal" data-i18n="warn_close">No free VPN client can change that. FreePN just refuses to pretend otherwise.</p>
+      <p class="warn__close reveal" data-i18n="warn_close">Treat free nodes as public places: fine for browsing, wrong for secrets.</p>
     </div>
   </section>
 
@@ -215,7 +225,6 @@
         <a class="btn btn--primary" href="https://github.com/YandiDesign/FreePN/releases/download/v1.0/FreePN-1.0-1.dmg" data-i18n="cta_download">Download FreePN</a>
         <a class="btn btn--ghost" href="https://github.com/YandiDesign/FreePN" target="_blank" rel="noopener" data-i18n="cta_ghost">View on GitHub</a>
       </div>
-      <p class="note" data-i18n="dl_note">The download is signed but not notarized. Right-click and Open on first launch. Source builds are one script away.</p>
     </div>
   </section>
 
@@ -232,6 +241,11 @@
     </nav>
   </div>
 </footer>
+
+<div class="lightbox" id="lightbox" hidden>
+  <button class="lightbox__close" id="lightboxClose" type="button" data-i18n="lb_close">Close</button>
+  <img id="lightboxImg" alt="">
+</div>
 
 </body>
 </html>
