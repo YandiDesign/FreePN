@@ -1,0 +1,237 @@
+<!doctype html>
+<!-- FreePN site: dark-only by design. The app ships a dark interface, so the site keeps one world. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FreePN: a free VPN client for macOS</title>
+<meta name="description" content="FreePN is a free, open source VPN client for macOS. Public VPN feeds tested for real reachability before they earn your connection. No accounts, no telemetry.">
+<link rel="canonical" href="https://freepn.pages.dev/">
+<meta name="theme-color" content="#08111b">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/img/favicon-64.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="FreePN">
+<meta property="og:title" content="FreePN: a free VPN client for macOS">
+<meta property="og:description" content="Public VPN feeds tested for real reachability before they earn your connection. No accounts, no telemetry.">
+<meta property="og:url" content="https://freepn.pages.dev/">
+<meta property="og:image" content="https://freepn.pages.dev/assets/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="assets/fonts/space-grotesk.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="styles.css">
+<script defer src="app.js"></script>
+</head>
+<body>
+<a class="skip" href="#main" data-i18n="skip">Skip to content</a>
+
+<header class="nav">
+  <div class="wrap nav__in">
+    <a class="brand" href="#top">
+      <img src="assets/img/freepn-logo.png" alt="" width="24" height="26">
+      <span>FreePN</span>
+    </a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#verify" data-i18n="nav_how">How it works</a>
+      <a href="#screens" data-i18n="nav_screens">Screens</a>
+      <a href="https://github.com/YandiDesign/FreePN" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+    <div class="nav__cta">
+      <button id="langToggle" class="lang" type="button" aria-label="Ganti ke Bahasa Indonesia">Bahasa Indonesia</button>
+      <a class="btn btn--primary btn--sm nav__dl" href="https://github.com/YandiDesign/FreePN/releases/download/v1.0/FreePN-1.0-1.dmg" data-i18n="cta_download">Download FreePN</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero" id="top">
+    <div class="dotfield" aria-hidden="true"></div>
+    <div class="wrap hero__grid">
+      <div class="hero__copy">
+        <h1 class="rise" data-i18n="hero_h1">Connected means verified.</h1>
+        <p class="hero__sub rise" data-i18n="hero_sub">Free public VPN feeds, tested for real reachability before they earn your connection. No accounts. No telemetry.</p>
+        <div class="hero__cta rise">
+          <a class="btn btn--primary" href="https://github.com/YandiDesign/FreePN/releases/download/v1.0/FreePN-1.0-1.dmg" data-i18n="cta_download">Download FreePN</a>
+          <a class="btn btn--ghost" href="https://github.com/YandiDesign/FreePN" target="_blank" rel="noopener" data-i18n="cta_ghost">View on GitHub</a>
+        </div>
+      </div>
+      <figure class="shot shot--hero rise">
+        <img src="assets/img/screen-connect.webp" width="1700" height="936" alt="FreePN connected to a server: the power ring is on, live connections are listed, and the traffic graph is running." data-i18n-alt="alt_connect" fetchpriority="high">
+      </figure>
+    </div>
+  </section>
+
+  <section class="sec" id="verify">
+    <div class="wrap">
+      <h2 class="reveal" data-i18n="verify_h2">Before it says Connected, it proves it.</h2>
+      <div class="steps reveal">
+        <div class="step">
+          <span class="step__num" aria-hidden="true">01</span>
+          <h3 data-i18n="step1_t">Write and validate</h3>
+          <p data-i18n="step1_b">Every connect assembles a fresh sing-box config: TUN routing, split rules, DNS. It must pass sing-box check before anything starts.</p>
+        </div>
+        <div class="step">
+          <span class="step__num" aria-hidden="true">02</span>
+          <h3 data-i18n="step2_t">Start and confirm</h3>
+          <p data-i18n="step2_b">The privileged helper launches the core as root. FreePN waits for the process to be alive and the Clash API to answer.</p>
+        </div>
+        <div class="step">
+          <span class="step__num" aria-hidden="true">03</span>
+          <h3 data-i18n="step3_t">Prove the exit</h3>
+          <p data-i18n="step3_b">A request travels through the tunnel's own path to fetch your public IP. If it fails, you get an error. Not a green light.</p>
+        </div>
+      </div>
+      <p class="sec__close reveal" data-i18n="verify_close">Dead nodes are marked as dead once they fail a real test. The ring only turns green when traffic actually flows.</p>
+    </div>
+  </section>
+
+  <section class="sec" id="screens">
+    <div class="wrap">
+      <h2 class="reveal" data-i18n="screens_h2">The rest of the app.</h2>
+    </div>
+    <div class="rail" role="region" aria-label="App screens">
+      <div class="card-shot reveal">
+        <figure class="shot">
+          <img src="assets/img/screen-servers.webp" width="1400" height="771" alt="FreePN's server list: search and filters on top, protocol and latency columns, starred favorites." data-i18n-alt="alt_servers" loading="lazy">
+        </figure>
+        <h3 data-i18n="cap_servers_t">Servers</h3>
+        <p data-i18n="cap_servers_b">Search thousands of nodes, filter by protocol or source, sort by latency, star favorites. Nodes that fail a real test are marked, and can be hidden.</p>
+      </div>
+      <div class="card-shot reveal">
+        <figure class="shot">
+          <img src="assets/img/screen-sources.webp" width="1400" height="771" alt="FreePN's sources screen: curated feed chips and a subscription URL field, with per-source status." data-i18n-alt="alt_sources" loading="lazy">
+        </figure>
+        <h3 data-i18n="cap_sources_t">Sources</h3>
+        <p data-i18n="cap_sources_b">Paste any subscription URL. Clash YAML, base64 blobs, and raw share links are detected per source, with counts and HTTP errors shown plainly.</p>
+      </div>
+      <div class="card-shot reveal">
+        <figure class="shot">
+          <img src="assets/img/screen-mac.webp" width="1400" height="771" alt="FreePN's MAC address screen: current MAC, randomize and restore controls, and a history of changes." data-i18n-alt="alt_mac" loading="lazy">
+        </figure>
+        <h3 data-i18n="cap_mac_t">MAC Address</h3>
+        <p data-i18n="cap_mac_b">Randomize or set a custom MAC, restore the original, and keep a searchable history of every change.</p>
+      </div>
+      <div class="card-shot reveal">
+        <figure class="shot">
+          <img src="assets/img/screen-settings.webp" width="1400" height="771" alt="FreePN's settings screen: update schedule, ping mode, CPU limit, UI scale, and language." data-i18n-alt="alt_settings" loading="lazy">
+        </figure>
+        <h3 data-i18n="cap_settings_t">Settings</h3>
+        <p data-i18n="cap_settings_b">Refresh schedules, ping mode, CPU limits, UI scale, and the app language. The public IP check stays off until you enable it.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="protocols">
+    <div class="wrap">
+      <h2 class="reveal" data-i18n="protos_h2">It speaks what free feeds speak.</h2>
+      <div class="protos reveal">
+        <div class="protos__col">
+          <h3 data-i18n="protos_sub">Protocols</h3>
+          <ul class="chips">
+            <li class="chip">Trojan</li>
+            <li class="chip">VMess</li>
+            <li class="chip">Shadowsocks</li>
+            <li class="chip">VLESS REALITY</li>
+            <li class="chip">Hysteria2</li>
+            <li class="chip">HTTP</li>
+            <li class="chip">SOCKS5</li>
+          </ul>
+          <p class="note" data-i18n="protos_note">Detected per node, deduplicated across feeds.</p>
+        </div>
+        <div class="protos__col">
+          <h3 data-i18n="sources_sub">Sources</h3>
+          <p data-i18n="sources_b">A fresh install starts with zero sources. Ten curated community feeds wait as one-click chips; pick the ones you trust, or add your own subscription URL. Feeds that rotate their links daily are resolved automatically, up to seven days back.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="split">
+    <div class="wrap split">
+      <div class="split__media reveal">
+        <figure class="shot">
+          <img src="assets/img/screen-split.webp" width="1500" height="826" alt="FreePN's split tunneling screen: inclusive mode selected, a domain rule, the change log, and the app scanner." data-i18n-alt="alt_split" loading="lazy">
+        </figure>
+        <p class="shot__cap" data-i18n="split_caption">The change log records what was written to the config, before it can affect a connection.</p>
+      </div>
+      <div class="split__copy">
+        <h2 class="reveal" data-i18n="split_h2">Decide what rides the tunnel.</h2>
+        <p class="reveal" data-i18n="split_p1">Inclusive sends only the apps you choose through the VPN. Exclusive tunnels everything and spares the apps you list. Rules match app bundle paths, so helper processes follow their parent, and individual domains can be routed by name.</p>
+        <p class="reveal" data-i18n="split_p2">Every rule change is written to a change log: what was written, when, and when it takes effect.</p>
+        <p class="note reveal" data-i18n="split_p3">MAC address spoofing lives one screen over: randomize on connect, restore on disconnect, full history kept.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="inside">
+    <div class="wrap">
+      <h2 class="reveal" data-i18n="inside_h2">How it is built, and what it refuses to do.</h2>
+      <div class="inside reveal">
+        <div class="cluster">
+          <h3 data-i18n="c1_t">The core</h3>
+          <dl class="kv">
+            <div class="kv__row"><dt>engine</dt><dd data-i18n="c1a_b">sing-box 1.13.6 in a universal binary, behind a swappable interface.</dd></div>
+            <div class="kv__row"><dt>guardrails</dt><dd data-i18n="c1b_b">Configs are validated with sing-box check before every connect. A failing config never runs.</dd></div>
+            <div class="kv__row"><dt>dns</dt><dd data-i18n="c1c_b">Proxied DoH for tunneled traffic, system DNS for the rest. Lookups follow the same rules your packets do.</dd></div>
+          </dl>
+        </div>
+        <div class="cluster">
+          <h3 data-i18n="c2_t">The helper</h3>
+          <dl class="kv">
+            <div class="kv__row"><dt>privilege</dt><dd data-i18n="c2a_b">A small launchd daemon runs the core with the privileges TUN mode needs, and nothing else.</dd></div>
+            <div class="kv__row"><dt>allowlist</dt><dd data-i18n="c2b_b">It answers a fixed list of XPC commands: start, stop, status, version, and MAC get, set, or restore. No shell, no arbitrary paths.</dd></div>
+            <div class="kv__row"><dt>clients</dt><dd data-i18n="c2c_b">Before it answers, the helper verifies the caller's code signature. Anything but FreePN is refused.</dd></div>
+          </dl>
+        </div>
+        <div class="cluster">
+          <h3 data-i18n="c3_t">Your machine</h3>
+          <dl class="kv">
+            <div class="kv__row"><dt>accounts</dt><dd data-i18n="c3a_b">No sign up, no email, no device ID. Open source under the MIT license.</dd></div>
+            <div class="kv__row"><dt>telemetry</dt><dd data-i18n="c3b_b">Zero analytics, by construction. The only network calls are feed fetches, pings, and an IP check you can leave off.</dd></div>
+            <div class="kv__row"><dt>storage</dt><dd data-i18n="c3c_b">Settings, rules, history: plain JSON under Application Support. Delete the folder and FreePN forgets everything.</dd></div>
+          </dl>
+        </div>
+      </div>
+      <p class="sec__close reveal" data-i18n="inside_close">574 unit tests ride along in the repository. The interface and this page both read English and Bahasa Indonesia.</p>
+    </div>
+  </section>
+
+  <section class="warn" id="warning">
+    <div class="wrap">
+      <h2 class="reveal" data-i18n="warn_h2">Read this before trusting any free node.</h2>
+      <p class="reveal" data-i18n="warn_b">FreePN does not run its own servers. It collects feeds that anyone can operate, and a node operator can see unencrypted traffic passing through. Never sign in to banking, your primary email, or anything you cannot afford to lose while connected. This is a tool for reaching the open web, not for hiding who you are.</p>
+      <p class="warn__close reveal" data-i18n="warn_close">No free VPN client can change that. FreePN just refuses to pretend otherwise.</p>
+    </div>
+  </section>
+
+  <section class="sec cta" id="download">
+    <div class="wrap reveal">
+      <img class="cta__logo" src="assets/img/freepn-logo.png" alt="" width="52" height="56">
+      <h2 data-i18n="dl_h2">Put an honest tunnel on your Mac.</h2>
+      <p data-i18n="dl_b">FreePN 1.0 for macOS 13 Ventura and later, on Apple Silicon and Intel.</p>
+      <div class="cta__row">
+        <a class="btn btn--primary" href="https://github.com/YandiDesign/FreePN/releases/download/v1.0/FreePN-1.0-1.dmg" data-i18n="cta_download">Download FreePN</a>
+        <a class="btn btn--ghost" href="https://github.com/YandiDesign/FreePN" target="_blank" rel="noopener" data-i18n="cta_ghost">View on GitHub</a>
+      </div>
+      <p class="note" data-i18n="dl_note">The download is signed but not notarized. Right-click and Open on first launch. Source builds are one script away.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__in">
+    <p data-i18n="footer_tag">FreePN by YandiDesign. MIT licensed.</p>
+    <nav aria-label="Footer">
+      <a href="https://github.com/YandiDesign/FreePN" target="_blank" rel="noopener" data-i18n="f_gh">GitHub</a>
+      <a href="https://github.com/YandiDesign/FreePN/blob/main/LICENSE" target="_blank" rel="noopener" data-i18n="f_lic">License</a>
+      <a href="https://github.com/YandiDesign/FreePN/releases" target="_blank" rel="noopener" data-i18n="f_rel">Releases</a>
+      <a href="https://github.com/YandiDesign/FreePN/blob/main/LICENSES/THIRD-PARTY.txt" target="_blank" rel="noopener" data-i18n="f_tp">Third-party licenses</a>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>

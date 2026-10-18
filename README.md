@@ -8,13 +8,14 @@
 
 Collects free public VPN subscriptions into one server list, verifies which nodes actually work, and routes your traffic through them with a bundled sing-box core — TUN mode, per-app and per-domain split tunneling, and MAC address spoofing. No accounts. No ads. No telemetry.
 
-[English](README.md) &nbsp;·&nbsp; [Bahasa Indonesia](README.id.md)
+[English](README.md) &nbsp;·&nbsp; [Bahasa Indonesia](README.id.md) &nbsp;·&nbsp; [Website](https://freepn.pages.dev)
 
 <img src="https://img.shields.io/badge/Platform-macOS%2013%2B%20Ventura-blue" alt="Platform: macOS 13+">
 <img src="https://img.shields.io/badge/Architecture-Universal%20arm64%20%2B%20x86__64-lightgrey" alt="Universal">
 <img src="https://img.shields.io/badge/Core-sing--box%201.13.6-orange" alt="sing-box 1.13.6">
 <img src="https://img.shields.io/badge/License-MIT-green" alt="MIT">
 <a href="https://github.com/YandiDesign/FreePN/releases/latest"><img src="https://img.shields.io/github/v/release/YandiDesign/FreePN?label=download&color=brightgreen" alt="Download"></a>
+<a href="https://freepn.pages.dev"><img src="https://img.shields.io/badge/Website-freepn.pages.dev-5BD6AC" alt="Website"></a>
 
 </div>
 
@@ -124,7 +125,7 @@ It does **not** run or sell its own VPN servers. Instead it aggregates **free pu
 
 ## Download
 
-Grab the latest DMG from **[Releases](https://github.com/YandiDesign/FreePN/releases/latest)**.
+Grab the latest DMG from **[Releases](https://github.com/YandiDesign/FreePN/releases/latest)**, or visit the website at **[freepn.pages.dev](https://freepn.pages.dev)**.
 
 **Requirements:** macOS 13 Ventura or newer · Apple Silicon or Intel (universal binary)
 
