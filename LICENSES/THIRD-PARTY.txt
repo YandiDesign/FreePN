@@ -1,0 +1,20 @@
+sing-box: GPL-3.0 — https://github.com/SagerNet/sing-box (verifikasi sendiri sebelum distribusi).
+
+DotMap: MIT — https://github.com/spilneo/DotMap (salinan vendored di FreePN/Vendor/DotMap/, LICENSE di sana).
+        Berasal dari NTag/dotted-map (MIT).
+
+GeoLite2 City: https://www.maxmind.com/en/home
+        This product includes GeoLite2 data created by MaxMind, available from https://www.maxmind.com.
+        subject to the MaxMind GeoLite End User License Agreement:
+        https://www.maxmind.com/en/geolite/eula
+        Database and Contents Copyright (c) MaxMind, Inc.
+        Salinan teks lisensi asli: LICENSES/GeoLite2-LICENSE.txt, GeoLite2-COPYRIGHT.txt, GeoLite2-README.txt.
+        Database wajib diperbarui <= 30 hari (EULA). Edisi 2026-10-09, tenggat 2026-11-09.
+        Data yang dikirim ke pengguna hanya kode negara ISO + koordinat kota (presisi kota, bukan alamat jalan).
+
+GeoNames (data geografi di dalam GeoLite2): https://www.geonames.org
+        Dibuat tersedia di bawah Creative Commons Attribution 4.0 International License.
+        https://creativecommons.org/licenses/by/4.0/
+
+maxminddb (Python, Apache-2.0): https://github.com/maxmind/MaxMind-DB-Reader-python
+        Dipakai HANYA oleh scripts/build-geolite2.py saat build, tidak masuk ke aplikasi.

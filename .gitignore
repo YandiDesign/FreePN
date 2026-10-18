@@ -1,0 +1,20 @@
+# macOS / ExFAT junk
+.DS_Store
+._*
+
+# Xcode
+DerivedData/
+build/
+*.xcuserstate
+xcuserdata/
+
+# Bundled VPN core — re-fetch with ./scripts/build-core.sh (see README)
+sing-box
+
+# Build artifacts
+dist/
+*.dmg
+
+# Python
+__pycache__/
+*.pyc

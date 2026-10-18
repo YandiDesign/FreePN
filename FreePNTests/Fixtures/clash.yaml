@@ -1,0 +1,4 @@
+proxies:
+  - {name: "SG-Test", type: vmess, server: 1.2.3.4, port: 443, uuid: 11111111-2222-3333-4444-555555555555}
+  - {name: "US-Trojan", type: trojan, server: 9.9.9.9, port: 443, password: secret, sni: s.example}
+  - {name: "JP-SS", type: ss, server: 5.6.7.8, port: 8388, cipher: aes-256-gcm, password: secret}

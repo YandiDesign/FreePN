@@ -1,0 +1,62 @@
+MIT License
+
+Copyright (c) 2026 YandiDesign
+https://github.com/YandiDesign
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+ATTRIBUTION REQUIREMENT
+------------------------
+
+This app is licensed under the MIT License, which permits reuse, modification
+and redistribution, but it requires one thing in return: the notice above must
+travel with the software.
+
+If you redistribute FreePN in whole or in part — a fork, a modified build, a
+repackaged copy — you must keep this attribution intact:
+
+    FreePN — Copyright (c) 2026 YandiDesign — https://github.com/YandiDesign
+    Licensed under the MIT License.
+
+You may add your own attribution alongside it, but you may not remove or
+replace this one.
+
+The same notice must remain visible in the application itself. That is why the
+About section in Settings shows it rather than hiding it in a submenu.
+
+---
+
+THIRD-PARTY CODE
+----------------
+
+FreePN bundles third-party components under their own licenses. These are NOT
+covered by the MIT notice above and keep their original terms:
+
+  * sing-box ............ GPL-3.0      https://github.com/SagerNet/sing-box
+  * DotMap .............. MIT          https://github.com/spilneo/DotMap
+
+Bundled data, each with mandatory attribution that FreePN displays in
+Settings -> About -> Third-party licenses:
+
+  * GeoLite2 (MaxMind) ... GeoLite2 EULA        https://www.maxmind.com/en/geolite/eula
+  * GeoNames ............. CC BY 4.0             https://creativecommons.org/licenses/by/4.0/
+
+Full details are in LICENSES/THIRD-PARTY.txt and LICENSES/.
